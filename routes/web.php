@@ -23,15 +23,17 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 });
 
 //課題3
-
 // use App\Http\Controllers\AAAController;
-
-//     Route::get('/XXX','[AAAController::class', 'bbb']);
+// Route::get('/XXX','[AAAController::class', 'bbb']);
 
 //課題4
 
-// use App\Http\Controllers\Admin\ProfileController;
-// Route::controller(ProfileController::class)->prefix('admin')->group(function() {
-//     Route::get('profile/create','add');
-//     Route::get('profile/edit','edit');
-// });
+use App\Http\Controllers\Admin\ProfileController;
+Route::controller(ProfileController::class)->prefix('admin')->group(function() {
+    Route::get('profile/create','add');
+    Route::get('profile/edit','edit');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
