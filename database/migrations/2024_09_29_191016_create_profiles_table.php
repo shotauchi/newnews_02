@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('title'); 
-            $table->string('body');  
-            $table->string('image_path')->nullable();
+            $table->string('title'); // ニュースのタイトルを保存するカラム
+            $table->string('body');  // ニュースの本文を保存するカラム
+            $table->string('image_path')->nullable(); 
             $table->timestamps();
         });
     }
