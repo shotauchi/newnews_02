@@ -14,11 +14,21 @@ use Carbon\Carbon;
 
 class NewsController extends Controller
 {
+    // 関数 add を宣言している
+    // クラスメソッド add を宣言している
+    // コントローラアクション add を宣言している
     public function add()
     {
         //dd("addが実行された");
         return view('admin.news.create');
     }
+    
+    // create 関数を宣言している
+    // create メソッドを宣言している
+    // create アクションを宣言している
+    // create メソッドには $request 変数が使われる
+    // create メソッドには $request 引数（ひきすう）が宣言されている
+    // create メソッドには $request 第一引数（だいいちひきすう）が宣言されている
     public function create(Request $request)
     {
         // Validationを行う

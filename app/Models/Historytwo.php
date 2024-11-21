@@ -16,5 +16,5 @@ class Historytwo extends Model
         'edited_at'  => 'required',
     );
     
-    protected $table = 'historytwo';
+    protected $table = 'historietwos';
 }
